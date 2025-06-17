@@ -716,7 +716,18 @@ class TrendAnalyzer:
         print("   2. 分析过去1周：HISTORY_DAYS=7")
         print("   3. 分析特定月份：CUSTOM_START_DATE=2024-01-01, CUSTOM_END_DATE=2024-01-31")
         print("   4. 分析最近36小时：HISTORY_DAYS=1, HISTORY_HOURS=12")
-        print("="*60)self.analysis_result = self.analyze_data()
+        print("="*60)
+        
+        try:
+            # 1. 收集数据
+            self.all_data = self.collect_all_data()
+            
+            if not self.all_data:
+                print("❌ 未获取到任何数据，程序终止")
+                return
+            
+            # 2. 分析数据
+            self.analysis_result = self.analyze_data()
             
             # 3. 生成并发送飞书报告
             if CONFIG['FEISHU_WEBHOOK_URL']:
