@@ -28,7 +28,12 @@ CONFIG = {
     "TOP_NEWS_PER_KEYWORD": 8,  # 增加每个关键词显示的新闻数量
     "FEISHU_SHOW_VERSION_UPDATE": True,
     "CONTINUE_WITHOUT_FEISHU": True,  # 没有飞书配置也继续运行
-    "API_BASE_URL": "https://api.newsnow.cc/api/news",
+    "API_BASE_URL": "https://newsnow.busiyi.world/api/news",  # 使用备用API地址
+    "BACKUP_API_URLS": [  # 备用API列表
+        "https://api.newsnow.cc/api/news",
+        "https://newsnow.busiyi.world/api/news", 
+        "https://newsnow.cc/api/news"
+    ],
     "REQUEST_DELAY": 0.3,  # 减少请求间隔以提高效率
     "ENABLE_TREND_ANALYSIS": True,  # 启用趋势分析
 }
