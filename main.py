@@ -17,7 +17,7 @@ CONFIG = {
     "VERSION_CHECK_URL": "https://raw.githubusercontent.com/sansan0/TrendRadar/refs/heads/master/version",
     "FEISHU_SHOW_VERSION_UPDATE": True,  # 控制显示版本更新提示，改成 False 将不接受新版本提示
     "FEISHU_SEPARATOR": "━━━━━━━━━━━━━━━━━━━",  # 飞书消息分割线，注意，其它类型的分割线可能会被飞书过滤而不显示
-    "REQUEST_INTERVAL": 1000,  # 请求间隔(毫秒)
+    "REQUEST_INTERVAL": 20000,  # 请求间隔(毫秒)
     "FEISHU_REPORT_TYPE": "daily",  # 飞书报告类型: "current"|"daily"|"both"
     "RANK_THRESHOLD": 5,  # 排名高亮阈值
     "USE_PROXY": True,  # 是否启用代理
